@@ -1,0 +1,48 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Memory Card Game</h1>
+
+  <div class="hud">
+    <div class="hud-item">Matched: <span id="matched">0</span> / <span id="totalPairs">0</span></div>
+    <div class="hud-item">Moves: <span id="moves">0</span></div>
+    <div class="hud-item">Time: <span id="time">0</span>s</div>
+
+    <label class="hud-item">
+      Difficulty:
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </label>
+
+    <label class="hud-item">
+      Sound:
+      <input type="checkbox" id="soundToggle" checked />
+    </label>
+
+    <button id="restart">Restart</button>
+  </div>
+
+  <div id="game-board"></div>
+
+  <div id="win" class="win hidden">
+    <div class="win-card">
+      <h2>You win!</h2>
+      <p>Time: <span id="winTime">0</span> seconds</p>
+      <p>Moves: <span id="winMoves">0</span></p>
+      <button id="playAgain">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
